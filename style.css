@@ -8,6 +8,8 @@ body {
   height: 100vh;
   display: flex;
   background-color: #f9c74f;
+  font-family: "Roboto", sans-serif;
+  color: white;
 }
 
 .container {
@@ -15,6 +17,10 @@ body {
   height: 41.875rem;
   width: 59.375rem;
   margin: auto;
+}
+
+#game-title {
+  text-align: center;
 }
 
 .memory-game {
