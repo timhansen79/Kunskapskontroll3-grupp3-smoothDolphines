@@ -5,16 +5,10 @@ const url = `https://www.flickr.com/services/rest/?api_key=${KEY}&method=flickr.
 
 fetch(url)
   .then(function (response) {
-    //console.log(response);
     return response.json();
   })
   .then(function (data) {
-    // console.log(data.photos.photo);
     getImageUrl(data.photos.photo);
-    /*     for (let i = 0; i < 12; i++) {
-      console.log(data.photos.photo[i]);
-      getImageUrl(data.photos.photo[i]);
-    } //array med tolv element */
   });
 
 //här ska vi pussla ihop bild urlen
@@ -33,14 +27,14 @@ function getImageUrl(photoArray) {
   setUrls(imgUrls);
 }
 
-//visa bildern
+//visa bilden
 function setUrls(urls) {
   urls.push(...urls);
   console.log(urls); //tolv urler
 
   //Vi behöver de 24 img elementet med front-face klass
   //query select all - array med 24 element
-  //loope igenom alla 24 elementen
+  //loopa igenom alla 24 elementen
   //om du dubblar alla urlerna så att du har en array med 24 st urler
   let frontFace = document.querySelectorAll(".front-face");
   console.log(frontFace);
@@ -48,8 +42,6 @@ function setUrls(urls) {
     frontFace[i].src = urls[i];
   }
 }
-
-//
 
 const cards = document.querySelectorAll(".memory-card");
 
@@ -102,6 +94,7 @@ function disableCards() {
   resetBoard();
 }
 
+//Funktion för att flippa tillbaka korten när de inte matchar.
 function unFlicpCards() {
   lockBoard = true;
   setTimeout(function () {
@@ -118,6 +111,7 @@ function resetBoard() {
   ];
 }
 
+//Funktion som avfyras direkt och blandar korten.
 (function shuffle() {
   cards.forEach(function (card) {
     let randomPos = Math.floor(Math.random() * 24);
