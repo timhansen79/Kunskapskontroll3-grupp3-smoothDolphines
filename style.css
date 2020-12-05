@@ -18,7 +18,7 @@ body {
   grid-column: 1/-1;
   height: 41.875rem;
   width: 59.375rem;
-  margin: 5rem 0 0 15rem;
+  margin: 4rem auto;
 }
 
 #game-title {
@@ -42,6 +42,7 @@ body {
   /* 3d effect */
   transform-style: preserve-3d;
   transition: transform 0.5s;
+  box-shadow: 10px 10px 10px -4px rgba(0, 0, 0, 0.58);
 }
 
 .memory-card:active {
@@ -81,54 +82,16 @@ body {
   font-family: "Sansita Swashed", cursive;
 } */
 
-.score-container {
-  height: 100%;
-  width: 360px;
-
-  /* margin-right: 20rem; */
-
-  display: flex;
-  align-items: center;
-}
-
-.control-button {
-  height: 100%;
-  display: flex;
-  /* background-color: rgba(128, 128, 128, 0.356); */
-}
-
-.control-button button {
-  /*  position: absolute;
-  left: 50%;
-  top: 50%; */
-  /* transform: translate(-50%, -50%); */
-  height: 60px;
-  width: 200px;
-  padding: 5px 15px;
-  background: linear-gradient(160deg, #f94144 0%, #fabc2a 100%);
-  color: white;
-  /* border: 3px solid cyan; */
-  font-size: 25px;
-  font-weight: bold;
-  text-align: center;
-  border-radius: 7px;
-  margin-left: 3.2rem;
-  margin-top: 3rem;
-  border-style: none;
-  box-shadow: 10px 10px 10px -4px rgba(0, 0, 0, 0.58);
-
-  /* font-family: "Sansita Swashed", cursive; */
-}
-
 .info-container {
-  width: 360px;
+  /*  width: 360px;
   height: 400px;
   margin-bottom: 1.1rem;
   margin-left: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center; */
   /* background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%); */
+
   background-color: #f9c74f;
   /* box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5); */
   padding: 20px;
@@ -143,12 +106,13 @@ body {
 .timer {
   /* border: 3px solid cyan; */
   /* border: 2px solid #f94144; */
+
   border-radius: 8px;
-  background-color: whitesmoke;
+  background: linear-gradient(rgb(147, 202, 233), rgb(40, 145, 206));
   margin-top: 1rem;
   text-align: center;
-  font-style: italic;
-  color: black;
+  /* font-style: italic; */
+  color: white;
   box-shadow: 10px 10px 10px -4px rgba(0, 0, 0, 0.58);
 }
 
@@ -159,16 +123,51 @@ body {
 }
 
 .reset-all {
-  padding: 5px 15px;
+  padding: 15px 25px;
   margin-top: 2rem;
-  /* border: 3px solid cyan; */
-  /* border: 2px solid #f94144; */
+
   border-radius: 8px;
-  /* font-family: "Sansita Swashed", cursive; */
-  font-style: italic;
+
   font-weight: bold;
   box-shadow: 10px 10px 10px -4px rgba(0, 0, 0, 0.58);
   border-style: none;
+  background: linear-gradient(rgba(147, 202, 233, 0.986), rgb(40, 145, 206));
+  color: white;
+  font-size: 1rem;
+}
+
+.control-button {
+  /*   height: 100%;
+  display: flex; */
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  /* background-color: rgba(128, 128, 128, 0.356); */
+}
+
+.control-button button {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 60px;
+  width: 200px;
+  padding: 5px 15px;
+  background: linear-gradient(rgb(147, 202, 233), rgb(40, 145, 206));
+  color: white;
+  /* border: 3px solid cyan; */
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 7px;
+
+  border-style: none;
+  box-shadow: 10px 10px 10px -4px rgba(0, 0, 0, 0.58);
+
+  /* font-family: "Sansita Swashed", cursive; */
 }
 
 /************* MUHANNAD'S DEL SLUTAR ************/
