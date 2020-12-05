@@ -3,9 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-    </style>
+
     <link rel="stylesheet" href="style.css" />
     <title>Memory Game</title>
   </head>
@@ -13,7 +11,7 @@
     <div class="container">
       <h1 id="game-title">MEMORY GAME</h1>
       <section class="memory-game">
-        <div class="memory-card" data-framework="1">
+        <!--       <div class="memory-card" data-framework="1">
           <img class="front-face" src="" alt="Aurelia" />
           <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
         </div>
@@ -118,10 +116,36 @@
         <div class="memory-card" data-framework="12">
           <img class="front-face" src="" alt="Optimus" />
           <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
-        </div>
+        </div> -->
       </section>
     </div>
+    <!------------ MUHANNAD'S DEL PÅBÖRJAR ------------>
 
+    <div class="score-container">
+      <div class="info-container">
+        <div class="name">
+          <span>Hello:</span> <span class="playerName"></span>
+        </div>
+
+        <div class="player-moves">
+          <span>Move(s):</span> <span class="moves">0</span>
+        </div>
+
+        <div class="timer">
+          <span>Time: </span><span class="clock">0:00</span>
+        </div>
+
+        <div class="restart">
+          <button class="reset-all">Restart <i class="fas fa-undo"></i></button>
+        </div>
+        <div class="control-button">
+          <button>Start Game</button>
+        </div>
+      </div>
+    </div>
+
+    <!------------ MUHANNAD'S DEL SLUTAR ------------>
+    <script src="/JS/prototype.js"></script>
     <script src="/JS/app.js"></script>
   </body>
 </html>
