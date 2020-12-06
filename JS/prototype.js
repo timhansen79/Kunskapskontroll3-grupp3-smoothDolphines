@@ -35,7 +35,7 @@ let cardArray = [];
 let frontFaceNumb = 1;
 
 for (let j = 0; j < 2; j++) {
-  // här gör vi 2 stackar med 12 kort vardera
+  // skapa 24 kort
   for (let i = 1; i <= 12; i++) {
     cardArray[i] = new Card(i);
 
