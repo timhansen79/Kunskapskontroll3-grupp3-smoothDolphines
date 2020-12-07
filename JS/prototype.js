@@ -42,7 +42,7 @@ for (let j = 0; j < 2; j++) {
       "front-face pair-" + frontFaceNumb
     ); /* Lägg till class på framsidan av korten och för varje concatenate med  "frontFaceNumb" som kollar omtalet är jämt och i så fall ökar med 1 */
     cardArray[i].backFaceClass("back-face"); //Lägg till class på backsidan av korten
-    cardArray[i].backFaceSource("../img/js-badge.svg"); //Lägg till bild för baksidan av korten.
+    cardArray[i].backFaceSource("../img/ufo-icon-vector.png"); //Lägg till bild för baksidan av korten.
     if (i % 2 === 0) {
       frontFaceNumb++;
     }

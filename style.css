@@ -23,6 +23,7 @@ body {
 
 #game-title {
   text-align: center;
+  font-size: 2.5rem;
 }
 
 .memory-game {
@@ -42,7 +43,6 @@ body {
   /* 3d effect */
   transform-style: preserve-3d;
   transition: transform 0.5s;
-  box-shadow: 10px 10px 10px -4px rgba(0, 0, 0, 0.58);
 }
 
 .memory-card:active {
