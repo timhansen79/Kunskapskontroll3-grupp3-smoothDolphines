@@ -15,10 +15,10 @@ body {
 }
 
 .container {
-  grid-column: 1/-1;
+  /*  grid-column: 1/-1;
   height: 41.875rem;
-  width: 59.375rem;
-  margin: 4rem auto;
+  width: 59.375rem; */
+  margin: 1rem auto;
 }
 
 #game-title {

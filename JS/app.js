@@ -275,6 +275,31 @@ let score = 0;
 function scoreRating() {
   // Skapa en funktion som lägger till 3 poäng om korten matchas
 
+  if (
+    moves == 5 ||
+    moves == 10 ||
+    moves == 15 ||
+    moves == 20 ||
+    moves == 25 ||
+    moves == 30 ||
+    moves == 35 ||
+    moves == 40 ||
+    moves == 45 ||
+    moves == 50 ||
+    moves == 55 ||
+    moves == 60 ||
+    moves == 65 ||
+    moves == 70 ||
+    moves == 75 ||
+    moves == 80 ||
+    moves == 85 ||
+    moves == 90 ||
+    moves == 95 ||
+    moves == 100
+  ) {
+    score -= 1;
+  }
+
   score += 3;
 
   playerScore.innerHTML = score;
