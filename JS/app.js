@@ -142,7 +142,7 @@ document.querySelector(".control-button button").onclick = function () {
 
   document.querySelector(".control-button").remove();
 };
-
+console.log(name);
 function resetGame() {
   // Skapa en funktion som laddar om sidan när spelaren klickar på startknappen
   window.location.reload();
@@ -153,13 +153,16 @@ function resetGame() {
 let clockId;
 let clockOff = true;
 let time = 0;
+let min = 0;
 
 function displayTime() {
   // Skapa en funktion som visar tiden i sekunder och minuter
-  const minutes = Math.floor(time / 60);
-  const seconds = time % 60;
+  // min = Math.floor(time / 60);
+  const minutes = min;
+  const seconds = time;
   const clock = document.querySelector(".clock");
   clock.innerHTML = time;
+
   if (seconds < 10) {
     clock.innerHTML = `${minutes}:0${seconds}`;
   } else {
@@ -173,6 +176,10 @@ function startClock() {
   // Skapa en funktion som börjar räkna ut tiden
   clockId = setInterval(function () {
     time++;
+    if (time == 60) {
+      min++;
+      time = 0;
+    }
     displayTime();
   }, 1000);
 }
@@ -256,7 +263,7 @@ cards.forEach(function (card) {
       setTimeout(function () {
         stopClock();
         alert(
-          `Congratulations! 🎉 \nYou Made (${moves}) Moves In (${time}) Sec .. Your Score Is (${score}) Point\nClikck "Ok" To Play Again!`
+          `Congratulations! 🎉 \nYou Made (${moves}) Moves In (${min} Min : ${time} Sec) .. Your Score Is (${score}) Point\nClikck "Ok" To Play Again!`
         );
         window.location.reload();
       }, 200);
